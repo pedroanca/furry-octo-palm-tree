@@ -1,0 +1,58 @@
+<div class="background-app">
+  <div class="container row">
+    <div class="col s12 center-align">
+      <h3 class="white-text">Regresar a la lista de objetos</h3>
+      <button class="btn blue" [routerLink]="['objetos']">Regresar</button>
+      <hr>
+      <br>
+    </div>
+    <div class="col s12 m8 pull-m1">
+      <form ngNativeValidate #Objectform="ngForm" (ngSubmit)="saveObject(Objectform)">
+        <div class="card card-background-80">
+          <div class="card-content">
+            <span class="card-title center-align"><b>Nuevo Objeto</b></span>
+            <div class="input-field">
+              <input id="name_object"type="text" class="validate" minlength="4"
+                     placeholder="Nombre del objeto" name="name" [(ngModel)]="objetoFirebase.name" required>
+            </div>
+            <div class="input-field">
+              <input id="characteristics_object" type="text" class="validate"
+                     placeholder="Características" name="characteristics" [(ngModel)]="objetoFirebase.characteristics">
+            </div>
+            <div class="input-field select-container">
+              <select [(ngModel)]="objetoFirebase.category" name="category" required
+                      #category="ngModel" #select>
+                <option [value]="i" *ngFor="let category of categories; let i = index">
+                  {{category}}
+                </option>
+              </select>
+              <label>Categorías</label>
+            </div>
+            <div [hidden]="category.valid || category.pristine" class="card red">
+              Escoge una categoría
+            </div>
+            <div class="input-field">
+              <p>
+                <label>
+                  <input type="checkbox" [(ngModel)]="objetoFirebase.consider" name="consider"/>
+                  <span class="checkbox-text">No considerar para cambios en un futuro</span>
+                </label>
+              </p>
+            </div>
+          </div>
+          <div class="card-action center-align">
+            <button type="button" class="btn btn-flat btn-reset"
+                    (click)="Objectform.reset()">Borrar</button>
+            <button type="submit" class="btn btn-flat btn-submit"
+                    [disabled]="Objectform.form.invalid">Enviar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col s12 m4 center-align">
+      <h4 class="black-text">Vista Previa</h4>
+      <br>
+      <app-list [object]="objetoFirebase" [isAMock]="true"></app-list>
+    </div>
+  </div>
+</div>

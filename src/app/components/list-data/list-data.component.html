@@ -1,0 +1,23 @@
+<div class="background-app">
+  <div class="container row">
+    <div class="col s12 center-align">
+      <h3 class="white-text">Crear nuevo objeto</h3>
+      <button class="btn blue" type="button" [routerLink]="['/objeto', 'nuevo']" >Nuevo</button>
+      <hr>
+    </div>
+    <div class="col s12">
+      <div *ngIf="isDataReady; else showSpinner">
+        <div class="row">
+          <div class="col s6 m4" *ngFor="let key of list | keys; let i = index">
+            <div *ngIf="list[key] as objeto">
+              <app-list [isDataReady]="isDataReady" [object]="objeto" [key]="key" (deleteByKey)="removeObject($event, i)"></app-list>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ng-template #showSpinner>
+        <app-spinner></app-spinner>
+      </ng-template>
+    </div>
+  </div>
+</div>

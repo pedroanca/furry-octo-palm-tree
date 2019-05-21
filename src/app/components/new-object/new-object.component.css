@@ -1,0 +1,30 @@
+.card-background-80 {
+  background-color: rgba(230, 244, 241, .80);
+}
+
+.btn-flat.btn-submit {
+  border: 1px solid var(--dark-color);
+}
+
+.btn-flat.btn-submit:hover {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+
+.btn-flat.btn-reset {
+  margin-right: 4%;
+}
+
+.btn-flat.btn-reset:hover {
+  background-color: var(--accent-color);
+  color: var(--dark-color);
+}
+
+.checkbox-text {
+  margin-top: 3%;
+  color: var(--dark-color);
+}
+
+.select-container {
+  margin-top: 8%;
+}

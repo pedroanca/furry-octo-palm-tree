@@ -1,0 +1,15 @@
+.bg-light-80{
+  background-color: rgba(238, 238, 238, .4);
+  padding: 4%;
+}
+
+.big {
+  width: 130px;
+  height: 130px;
+}
+
+.valign-wrapper {
+  margin-top: 25%;
+  margin-left: 42%;
+}
+

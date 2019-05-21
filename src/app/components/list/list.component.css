@@ -1,0 +1,44 @@
+.card-background-color {
+  background-color: var(--light-color);
+  border: 3px solid var(--accent-color);
+}
+
+.content-background {
+  background-color:  var(--accent-color);
+}
+
+.btn-outline-delete, .btn-outline-edit {
+  transition: all 200ms ease-in-out;
+}
+
+.btn-flat.btn-outline-delete {
+  border: 1px solid #d32f2f;
+  color: #d32f2f;
+}
+
+.btn-outline-delete:hover {
+  background-color: #d32f2f;
+  color: var(--light-color);
+}
+
+.btn-flat.btn-outline-edit {
+  border: 1px solid #311b92;
+  margin-right: 1%;
+  color: #311b92;
+}
+
+.btn-outline-edit:hover {
+  background-color: #311b92;
+  color: var(--light-color);
+}
+
+.btn-flat[disabled] {
+  border: 1px solid #616161;
+  color: #616161 !important;
+}
+
+@media only screen and (min-width: 601px) { }
+
+@media only screen and (min-width: 993px) {}
+
+@media only screen and (min-width: 1200px) { }

@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  url: 'https://final-proyect-dfeed.firebaseio.com'
 };

@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --main-color: #8DB8E2;
+  --accent-color: #b0bec5;
+  --dark-color: #3B4856;
+  --light-color: #ECFBFF;
+}
+
+body, html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.background-app {
+  /* The image used */
+  background-image: linear-gradient(to bottom, #8db8e2, #86bce6, #7ec0e9, #76c4ec, #6dc8ee, #65cbef, #5ccfef, #53d2ef, #4ad6ee, #42daeb, #3ddde8, #3be1e4);
+
+  /* Full height */
+  min-height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.select-wrapper > .dropdown-content {
+  background-color: var(--dark-color);
+}
+
+.select-dropdown li.disabled>span {
+  color: var(--main-color) !important;
+}
+
+.dropdown-content li>span{
+  color: var(--light-color) !important;
+}
+
+.center-vertical-content {
+  padding: 0;
+}
+
+@media only screen and (min-width: 601px) {
+  .center-vertical-content { padding: 50% 0; }
+}
+
+@media only screen and (min-width: 993px) {
+  .center-vertical-content { padding: 30% 0; }
+}
+
+
+@media only screen and (min-width: 1200px) { }
